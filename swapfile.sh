@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# EC2 micro instances; 1G is too small for packages like readr/haven compilation)
-# If yes, prompt to make a local swap file.
 
 sysmem0="$(cat /proc/meminfo | grep MemTotal | awk '{ print $2 }')"
 sysmem="$((sysmem / 1000))"
